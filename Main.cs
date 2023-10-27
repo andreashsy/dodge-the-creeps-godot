@@ -26,6 +26,7 @@ public partial class Main : Node
 	public void NewGame()
 	{
 		_score = 0;
+		GetTree().CallGroup("mobs", Node.MethodName.QueueFree);
 
 		var player = GetNode<Player>("Player");
 		var startPosition = GetNode<Marker2D>("StartPosition");
